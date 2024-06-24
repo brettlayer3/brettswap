@@ -1,2 +1,2 @@
 # Brettswap.com
-Brettswap DEX on Brettvm_Sepolia
+Brettswap DEX on BrettVM

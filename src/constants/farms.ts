@@ -33,7 +33,7 @@ export const POOLS: AddressMap = {
       },
       token1: {
         id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
-        name: 'Brettvm_Sepolia',
+        name: 'Brett',
         symbol: 'BRETT',
         decimals: 18,
       },
@@ -53,7 +53,7 @@ export const POOLS: AddressMap = {
       id: 2,
       token0: {
         id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
-        name: 'Wrapped Brettvm_Sepolia',
+        name: 'Wrapped Brett',
         symbol: 'WBRETT',
         decimals: 18,
       },
@@ -85,7 +85,7 @@ export const POOLS: AddressMap = {
       },
       token1: {
         id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
-        name: 'Brettvm_Sepolia',
+        name: 'Brett',
         symbol: 'BRETT',
         decimals: 18,
       },
@@ -111,7 +111,7 @@ export const POOLS: AddressMap = {
       },
       token1: {
         id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
-        name: 'Brettvm_Sepolia',
+        name: 'Brett',
         symbol: 'BRETT',
         decimals: 18,
       },

@@ -129,7 +129,7 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
       <h1 className="text-center">
         {`Looks like you're using an unsupported network.`}
         <br />
-        {`Switch to Brettvm_Sepolia Network to use Brettswap.com.`}
+        {`Switch to BrettVM Sepolia Network to use Brettswap.com.`}
       </h1>
     )
   }

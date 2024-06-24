@@ -51,9 +51,9 @@ export const SUPPORTED_NETWORKS: {
   },
   [ChainId.BRETTVM_SEPOLIA]: {
     chainId: '0x214',
-    chainName: 'Brettvm_Sepolia',
+    chainName: 'BrettVM Sepolia',
     nativeCurrency: {
-      name: 'Brettvm_Sepolia',
+      name: 'Brett',
       symbol: 'BRETT',
       decimals: 18,
     },

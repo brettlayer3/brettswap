@@ -516,7 +516,7 @@ export default function Bridge() {
             <div className="p-4 text-center">
               <div className="justify-between space-x-3 items-center">
                 <Typography component="h3" variant="base">
-                  {i18n._(t`Bridge tokens to and from the Brettvm_Sepolia Network`)}
+                  {i18n._(t`Bridge tokens to and from the BrettVM Sepolia Network`)}
                 </Typography>
               </div>
             </div>

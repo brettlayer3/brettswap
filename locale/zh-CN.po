@@ -397,7 +397,7 @@ msgstr "跨链桥"
 #~ msgstr ""
 
 #: src/pages/bridge/index.tsx:519
-msgid "Bridge tokens to and from the Brettvm_Sepolia Network"
+msgid "Bridge tokens to and from the BrettVM Sepolia Network"
 msgstr ""
 
 #: src/pages/bridge/index.tsx:438
@@ -1347,7 +1347,7 @@ msgstr "最少可获得的数量"
 #~ msgstr "错过了拍卖？"
 
 #: src/pages/faucet/index.tsx:82
-msgid "Brettvm_Sepolia Faucet"
+msgid "BrettVM Sepolia Faucet"
 msgstr ""
 
 #: src/features/farm/FarmMenu.tsx:31

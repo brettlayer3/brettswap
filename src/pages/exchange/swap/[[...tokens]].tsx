@@ -370,7 +370,7 @@ export default function Swap() {
         <meta
           key="description"
           name="description"
-          content="Brettswap allows for swapping of compatible tokens on Brettvm_Sepolia."
+          content="Brettswap allows for swapping of compatible tokens on BrettVM Sepolia."
         />
       </Head>
 

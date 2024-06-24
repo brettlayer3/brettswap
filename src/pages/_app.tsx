@@ -106,7 +106,7 @@ function MyApp({
         />
         <title key="title">Brettswap</title>
 
-        <meta key="description" name="description" content="Brettswap - AMM on Brettvm_Sepolia." />
+        <meta key="description" name="description" content="Brettswap - AMM on BrettVM Sepolia." />
 
         <meta name="application-name" content="Brettswap App" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -122,14 +122,14 @@ function MyApp({
         <meta key="twitter:card" name="twitter:card" content="app" />
         <meta key="twitter:title" name="twitter:title" content="Brettswap App" />
         <meta key="twitter:url" name="twitter:url" content="https://brettswap.com" />
-        <meta key="twitter:description" name="twitter:description" content="Brettswap - AMM on Brettvm_Sepolia." />
+        <meta key="twitter:description" name="twitter:description" content="Brettswap - AMM on BrettVM Sepolia." />
         <meta key="twitter:image" name="twitter:image" content="https://brettswap.com/icons/icon.png" />
         <meta key="twitter:creator" name="twitter:creator" content="@brettswap.com" />
         <meta key="og:type" property="og:type" content="website" />
         <meta key="og:site_name" property="og:site_name" content="Brettswap App" />
         <meta key="og:url" property="og:url" content="https://brettswap.com" />
         <meta key="og:image" property="og:image" content="https://brettswap.com/icon.png" />
-        <meta key="og:description" property="og:description" content="Brettswap - AMM on Brettvm_Sepolia." />
+        <meta key="og:description" property="og:description" content="Brettswap - AMM on BrettVM Sepolia." />
       </Head>
 
       <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>

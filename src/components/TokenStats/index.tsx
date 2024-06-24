@@ -9,7 +9,7 @@ import { PriceContext } from '../../contexts/priceContext'
 
 const supportedTokens = {
   BRETT: {
-    name: 'Brettvm_Sepolia',
+    name: 'Brett',
     symbol: 'BRETT',
     icon: '/images/tokens/brett.png',
   },
