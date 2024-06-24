@@ -40,7 +40,7 @@ import { useTransactionAdder } from '../../../state/transactions/hooks'
 import useTransactionDeadline from '../../../hooks/useTransactionDeadline'
 import { useWalletModalToggle } from '../../../state/application/hooks'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../../components/SolarbeamLogo'
+import BrettswapLogo from '../../../components/BrettswapLogo'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
@@ -338,14 +338,14 @@ export default function Add() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Add Liquidity`)} | Solarbeam</title>
+        <title>{i18n._(t`Add Liquidity`)} | Brettswap</title>
         <meta
           key="description"
           name="description"
-          content="Add liquidity to the Solarbeam AMM to enable gas optimised and low slippage trades across countless networks"
+          content="Add liquidity to the Brettswap AMM to enable gas optimised and low slippage trades across countless networks"
         />
       </Head>
-      <SolarbeamLogo />
+      <BrettswapLogo />
       <Container id="remove-liquidity-page" maxWidth="2xl" className="space-y-4">
         <DoubleGlowShadow>
           <div className="p-4 space-y-4 rounded bg-dark-900" style={{ zIndex: 1 }}>

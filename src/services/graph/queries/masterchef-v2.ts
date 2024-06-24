@@ -12,7 +12,7 @@ export const poolsV2Query = gql`
       id
       pair
       allocPoint
-      slpBalance
+      blpBalance
       masterChef {
         id
         totalAllocPoint

@@ -1,13 +1,13 @@
 import { CurrencyAmount, JSBI } from '../../sdk'
 import { Chef } from './enum'
-import { SOLAR } from '../../constants'
+import { BSWAP } from '../../constants'
 import { NEVER_RELOAD, useSingleCallResult, useSingleContractMultipleData } from '../../state/multicall/hooks'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import {
-  useSolarDistributorContract,
+  useBswapDistributorContract,
   useBNBPairContract,
-  useSolarMovrContract,
-  useSolarVaultContract,
+  useBswapBrettContract,
+  useBswapVaultContract,
 } from '../../hooks'
 
 import { Contract } from '@ethersproject/contracts'
@@ -20,7 +20,7 @@ const { default: axios } = require('axios')
 export function useUserInfo(farm, token) {
   const { account } = useActiveWeb3React()
 
-  const contract = useSolarVaultContract()
+  const contract = useBswapVaultContract()
 
   const args = useMemo(() => {
     if (!account) {
@@ -47,10 +47,10 @@ export function useUserInfo(farm, token) {
   }
 }
 
-export function usePendingSolar(farm) {
+export function usePendingBswap(farm) {
   const { account, chainId } = useActiveWeb3React()
 
-  const contract = useSolarVaultContract()
+  const contract = useBswapVaultContract()
 
   const args = useMemo(() => {
     if (!account) {
@@ -59,13 +59,13 @@ export function usePendingSolar(farm) {
     return [String(farm.id), String(account)]
   }, [farm, account])
 
-  const result = useSingleCallResult(args ? contract : null, 'pendingSolar', args)?.result
+  const result = useSingleCallResult(args ? contract : null, 'pendingBswap', args)?.result
 
   const value = result?.[0]
 
   const amount = value ? JSBI.BigInt(value.toString()) : undefined
 
-  return amount ? CurrencyAmount.fromRawAmount(SOLAR[chainId], amount) : undefined
+  return amount ? CurrencyAmount.fromRawAmount(BSWAP[chainId], amount) : undefined
 }
 
 export function usePendingToken(farm, contract) {
@@ -87,7 +87,7 @@ export function usePendingToken(farm, contract) {
   return useMemo(() => pendingTokens, [pendingTokens])
 }
 
-export function useSolarPositions(contract?: Contract | null) {
+export function useBswapPositions(contract?: Contract | null) {
   const { account } = useActiveWeb3React()
 
   const numberOfPools = useSingleCallResult(contract ? contract : null, 'poolLength', undefined, NEVER_RELOAD)
@@ -100,32 +100,32 @@ export function useSolarPositions(contract?: Contract | null) {
     return [...Array(numberOfPools.toNumber()).keys()].map((pid) => [String(pid), String(account)])
   }, [numberOfPools, account])
 
-  const pendingSolar = useSingleContractMultipleData(args ? contract : null, 'pendingSolar', args)
+  const pendingBswap = useSingleContractMultipleData(args ? contract : null, 'pendingBswap', args)
   const userInfo = useSingleContractMultipleData(args ? contract : null, 'userInfo', args)
   const userLockedUntil = useSingleContractMultipleData(args ? contract : null, 'userLockedUntil', args)
 
   return useMemo(() => {
-    if (!pendingSolar || !userInfo || !userLockedUntil) {
+    if (!pendingBswap || !userInfo || !userLockedUntil) {
       return []
     }
-    return zip(pendingSolar, userInfo, userLockedUntil)
+    return zip(pendingBswap, userInfo, userLockedUntil)
       .map((data, i) => ({
         id: args[i][0],
-        pendingSolar: data[0].result?.[0] || Zero,
+        pendingBswap: data[0].result?.[0] || Zero,
         amount: data[1].result?.[0] || Zero,
         lockedUntil: data[2].result?.[0] || Zero,
       }))
-      .filter(({ pendingSolar, amount }) => {
-        return (pendingSolar && !pendingSolar.isZero()) || (amount && !amount.isZero())
+      .filter(({ pendingBswap, amount }) => {
+        return (pendingBswap && !pendingBswap.isZero()) || (amount && !amount.isZero())
       })
-  }, [args, pendingSolar, userInfo, userLockedUntil])
+  }, [args, pendingBswap, userInfo, userLockedUntil])
 }
 
 export function usePositions() {
-  return useSolarPositions(useSolarVaultContract())
+  return useBswapPositions(useBswapVaultContract())
 }
 
-export function useSolarVaults(contract?: Contract | null) {
+export function useBswapVaults(contract?: Contract | null) {
   const numberOfPools = useSingleCallResult(contract ? contract : null, 'poolLength', undefined, NEVER_RELOAD)
     ?.result?.[0]
 
@@ -147,7 +147,7 @@ export function useSolarVaults(contract?: Contract | null) {
       lpToken: data[0].result?.['lpToken'] || '',
       allocPoint: data[0].result?.['allocPoint'] || '',
       lastRewardBlock: data[0].result?.['lastRewardBlock'] || '',
-      accSolarPerShare: data[0].result?.['accSolarPerShare'] || '',
+      accBswapPerShare: data[0].result?.['accBswapPerShare'] || '',
       depositFeeBP: data[0].result?.['depositFeeBP'] || '',
       harvestInterval: data[0].result?.['harvestInterval'] || '',
       totalLp: data[0].result?.['totalLp'] || '',
@@ -244,7 +244,7 @@ export function useTokenInfo(tokenContract?: Contract | null) {
 }
 
 export function useVaults() {
-  return useSolarVaults(useSolarVaultContract())
+  return useBswapVaults(useBswapVaultContract())
 }
 
 export function usePricesApi() {
@@ -257,9 +257,9 @@ export function useFarmsApi() {
   return useAsync(usePriceApi, true)
 }
 
-export function useSolarPrice() {
+export function useBswapPrice() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  return usePrice(useSolarMovrContract())
+  return usePrice(useBswapBrettContract())
 }
 
 export function useBNBPrice() {
@@ -268,15 +268,15 @@ export function useBNBPrice() {
 }
 
 export function useVaultInfo(contract) {
-  const solarPerBlock = useSingleCallResult(contract ? contract : null, 'solarPerBlock', undefined, NEVER_RELOAD)
+  const bswapPerBlock = useSingleCallResult(contract ? contract : null, 'bswapPerBlock', undefined, NEVER_RELOAD)
     ?.result?.[0]
 
   const totalAllocPoint = useSingleCallResult(contract ? contract : null, 'totalAllocPoint', undefined, NEVER_RELOAD)
     ?.result?.[0]
 
-  return useMemo(() => ({ solarPerBlock, totalAllocPoint }), [solarPerBlock, totalAllocPoint])
+  return useMemo(() => ({ bswapPerBlock, totalAllocPoint }), [bswapPerBlock, totalAllocPoint])
 }
 
-export function useSolarVaultInfo() {
-  return useVaultInfo(useSolarVaultContract())
+export function useBswapVaultInfo() {
+  return useVaultInfo(useBswapVaultContract())
 }

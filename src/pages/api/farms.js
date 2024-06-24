@@ -1,10 +1,10 @@
 const Web3 = require('web3')
-import distributorAbi from '../../constants/abis/solar-distributor.json'
+import distributorAbi from '../../constants/abis/bswap-distributor.json'
 import pairAbi from '../../constants/abis/uniswap-v2-pair.json'
 import { POOLS } from '../../constants/farms'
 import { ChainId } from '../../sdk'
 
-const NETWORK_URL = 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e4'
+const NETWORK_URL = 'https://brettvm_sepolia-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e4'
 const web3 = new Web3(NETWORK_URL)
 
 export default async function handler(req, res) {
@@ -39,7 +39,7 @@ export async function farms() {
     })
 
     const ret = []
-    const poolStaticInfo = POOLS[ChainId.MOONRIVER]
+    const poolStaticInfo = POOLS[ChainId.BRETTVM_SEPOLIA]
 
     for (const pool of poolsInfo) {
       const staticInfo = poolStaticInfo[web3.utils.toChecksumAddress(pool.lpToken)]
@@ -47,7 +47,7 @@ export async function farms() {
       if (!staticInfo.token1) {
         ret.push({
           address: staticInfo.token0.id,
-          baseSymbol: staticInfo.token0.symbol.toLowerCase().replace('wmovr', 'movr'),
+          baseSymbol: staticInfo.token0.symbol.toLowerCase().replace('wbrett', 'brett'),
           baseAmount: pool.totalLp / 10 ** staticInfo.token0?.decimals,
           single: true,
         })
@@ -80,17 +80,17 @@ export async function farms() {
         ret.push({
           address: web3.utils.toChecksumAddress(pool.lpToken),
           baseSymbol:
-            token0info.symbol == 'SOLAR' || token1info.symbol == 'SOLAR'
-              ? 'solar'
-              : token0info.symbol == 'MOVR' || token1info.symbol == 'MOVR'
-              ? 'movr'
+            token0info.symbol == 'BSWAP' || token1info.symbol == 'BSWAP'
+              ? 'bswap'
+              : token0info.symbol == 'BRETT' || token1info.symbol == 'BRETT'
+              ? 'brett'
               : token0info.symbol == 'USDC' || token1info.symbol == 'USDC'
               ? 'usdc'
               : '',
           baseAmount:
-            token0info.symbol == 'SOLAR' || token0info.symbol == 'MOVR'
+            token0info.symbol == 'BSWAP' || token0info.symbol == 'BRETT'
               ? token0amount
-              : token1info.symbol == 'SOLAR' || token1info.symbol == 'MOVR'
+              : token1info.symbol == 'BSWAP' || token1info.symbol == 'BRETT'
               ? token1amount
               : token0info.symbol == 'USDC'
               ? token0amount

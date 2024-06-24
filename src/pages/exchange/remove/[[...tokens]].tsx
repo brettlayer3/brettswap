@@ -711,8 +711,8 @@ export default function Remove() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Remove Liquidity`)} | Solarbeam </title>
-        <meta key="description" name="description" content={i18n._(t`Remove liquidity of Solarbeam`)} />
+        <title>{i18n._(t`Remove Liquidity`)} | Brettswap </title>
+        <meta key="description" name="description" content={i18n._(t`Remove liquidity of Brettswap`)} />
       </Head>
 
       <Container id="remove-liquidity-page" maxWidth="2xl" className="space-y-4">

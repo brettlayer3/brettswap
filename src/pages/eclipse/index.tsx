@@ -10,7 +10,7 @@ export default function NFTLaunchpad(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Eclipse | Solarbeam</title>
+        <title>Eclipse | Brettswap</title>
         <meta key="description" name="description" content="Eclipse" />
       </Head>
 

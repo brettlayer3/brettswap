@@ -46,7 +46,7 @@ import { useUSDCValue } from '../../../hooks/useUSDCPrice'
 import { warningSeverity } from '../../../functions/prices'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 import Image from 'next/image'
-import SolarbeamLogo from '../../../components/SolarbeamLogo'
+import BrettswapLogo from '../../../components/BrettswapLogo'
 import Alert from '../../../components/Alert'
 
 export default function Swap() {
@@ -366,11 +366,11 @@ export default function Swap() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Solarbeam`)}</title>
+        <title>{i18n._(t`Brettswap`)}</title>
         <meta
           key="description"
           name="description"
-          content="Solarbeam allows for swapping of compatible tokens on Moonriver."
+          content="Brettswap allows for swapping of compatible tokens on Brettvm_Sepolia."
         />
       </Head>
 
@@ -380,7 +380,7 @@ export default function Swap() {
         onConfirm={handleConfirmTokenWarning}
       />
 
-      <SolarbeamLogo />
+      <BrettswapLogo />
 
       <DoubleGlowShadow opacity="0.6">
         <div id="swap-page" className="w-full max-w-2xl p-4 space-y-4 rounded bg-dark-900 z-1">

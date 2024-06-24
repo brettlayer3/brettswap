@@ -5,7 +5,7 @@ import { WrappedTokenInfo } from '../../state/lists/wrappedTokenInfo'
 import useHttpLocations from '../../hooks/useHttpLocations'
 
 export const getTokenLogoURL = (address: string, chainId: ChainId) => {
-  return `https://raw.githubusercontent.com/solarbeamio/assets/master/blockchains/${BLOCKCHAIN[chainId]}/assets/${address}/logo.png`
+  return `https://raw.githubusercontent.com/brettswapcom/assets/master/blockchains/${BLOCKCHAIN[chainId]}/assets/${address}/logo.png`
 }
 
 const BLOCKCHAIN = {
@@ -16,7 +16,7 @@ const BLOCKCHAIN = {
   [ChainId.HARMONY]: 'harmony',
   [ChainId.MATIC]: 'polygon',
   [ChainId.XDAI]: 'xdai',
-  [ChainId.MOONRIVER]: 'moonriver',
+  [ChainId.BRETTVM_SEPOLIA]: 'brettvm_sepolia',
   // [ChainId.OKEX]: 'okex',
 }
 
@@ -34,7 +34,7 @@ function getCurrencyLogoUrls(currency) {
   const urls = []
   if (currency.chainId in BLOCKCHAIN) {
     urls.push(
-      `https://raw.githubusercontent.com/solarbeamio/assets/master/blockchains/${BLOCKCHAIN[currency.chainId]}/assets/${
+      `https://raw.githubusercontent.com/brettswapcom/assets/master/blockchains/${BLOCKCHAIN[currency.chainId]}/assets/${
         currency.address
       }/logo.png`
     )
@@ -45,8 +45,8 @@ function getCurrencyLogoUrls(currency) {
 
 const AvalancheLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/avax.jpg'
 const BinanceCoinLogo =
-  'https://raw.githubusercontent.com/solarbeamio/assets/master/blockchains/smartchain/info/logo.png'
-const EthereumLogo = 'https://raw.githubusercontent.com/solarbeamio/assets/master/blockchains/ethereum/info/logo.png'
+  'https://raw.githubusercontent.com/brettswapcom/assets/master/blockchains/smartchain/info/logo.png'
+const EthereumLogo = 'https://raw.githubusercontent.com/brettswapcom/assets/master/blockchains/ethereum/info/logo.png'
 const FantomLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/ftm.jpg'
 const HarmonyLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/one.jpg'
 const HecoLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/heco.jpg'
@@ -55,7 +55,7 @@ const MoonbeamLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/t
 const OKExLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/okt.jpg'
 const xDaiLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/dai.jpg'
 const CeloLogo = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/celo.jpg'
-const MoonriverLogo = 'https://solarbeam.io/images/tokens/movr.png'
+const Brettvm_SepoliaLogo = 'https://brettswap.com/images/tokens/brett.png'
 
 const logo: { readonly [chainId in ChainId]?: string } = {
   [ChainId.MAINNET]: EthereumLogo,
@@ -78,7 +78,7 @@ const logo: { readonly [chainId in ChainId]?: string } = {
   [ChainId.ARBITRUM]: EthereumLogo,
   [ChainId.ARBITRUM_TESTNET]: EthereumLogo,
   [ChainId.CELO]: CeloLogo,
-  [ChainId.MOONRIVER]: MoonriverLogo,
+  [ChainId.BRETTVM_SEPOLIA]: Brettvm_SepoliaLogo,
 }
 
 interface CurrencyLogoProps {
@@ -90,7 +90,7 @@ interface CurrencyLogoProps {
 }
 
 const unknown = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/unknown.png'
-const solar = 'https://solarbeam.io/icon.png'
+const bswap = 'https://brettswap.com/icon.png'
 
 const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({
   currency,
@@ -107,8 +107,8 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({
     if (!currency) {
       return [unknown]
     }
-    if (currency?.symbol == 'SOLAR') {
-      return [solar]
+    if (currency?.symbol == 'BSWAP') {
+      return [bswap]
     }
     if (currency.isNative || currency.equals(WNATIVE[currency.chainId])) {
       return [logo[currency.chainId], unknown]

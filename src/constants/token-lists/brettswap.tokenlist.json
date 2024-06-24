@@ -1,0 +1,30 @@
+{
+  "name": "Brettswap List",
+  "timestamp": "2021-07-15T12:15:29.993Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png",
+  "keywords": ["sushiswap", "default"],
+  "tokens": [
+    {
+      "name": "Brettswap Token",
+      "address": "0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B",
+      "symbol": "BSWAP",
+      "decimals": 18,
+      "chainId": 532,
+      "logoURI": "http://brettswap.com/icon.png"
+    },
+    {
+      "name": "Wrapped BRETT",
+      "address": "0x98878B06940aE243284CA214f92Bb71a2b032B8A",
+      "symbol": "WBRETT",
+      "decimals": 18,
+      "chainId": 532,
+      "logoURI": "https://brettswap.com/images/tokens/brett.png"
+    }
+  ]
+}

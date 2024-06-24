@@ -92,8 +92,8 @@ const builders = {
     }
   },
 
-  moonriver: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
-    const prefix = 'https://blockscout.moonriver.moonbeam.network/'
+  brettvm_sepolia: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
+    const prefix = 'https://sepolia.brettscan.com'
     switch (type) {
       case 'transaction':
         return `${prefix}/tx/${data}`
@@ -247,9 +247,9 @@ const chains: ChainObject = {
     chainName: '',
     builder: builders.moonbase,
   },
-  [ChainId.MOONRIVER]: {
+  [ChainId.BRETTVM_SEPOLIA]: {
     chainName: '',
-    builder: builders.moonriver,
+    builder: builders.brettvm_sepolia,
   },
   [ChainId.AVALANCHE]: {
     chainName: '',

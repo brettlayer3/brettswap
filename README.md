@@ -1,2 +1,2 @@
-# Solarbeam.io
-Solarbeam DEX on Moonriver
+# Brettswap.com
+Brettswap DEX on Brettvm_Sepolia

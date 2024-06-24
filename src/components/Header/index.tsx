@@ -77,7 +77,7 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Eclipse`)}
                         </a>
                       </NavLink>
-                      <NavLink href="https://analytics.solarbeam.io">
+                      <NavLink href="https://analytics.brettswap.com">
                         <a
                           target="_blank"
                           id={`swap-nav-link`}
@@ -92,14 +92,14 @@ function AppBar(): JSX.Element {
 
                 <div className="fixed bottom-0 left-0 z-10 flex flex-row items-center justify-center w-full p-4 lg:w-auto bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
-                    {chainId && [ChainId.MOONRIVER].includes(chainId) && (
+                    {chainId && [ChainId.BRETTVM_SEPOLIA].includes(chainId) && (
                       <div className="w-auto flex items-center rounded mr-1 bg-dark-800 shadow-sm text-primary text-xs hover:bg-dark-700 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto hidden sm:block">
-                        <TokenStats token="MOVR" />
+                        <TokenStats token="BRETT" />
                       </div>
                     )}
-                    {chainId && [ChainId.MOONRIVER].includes(chainId) && (
+                    {chainId && [ChainId.BRETTVM_SEPOLIA].includes(chainId) && (
                       <div className="w-auto flex items-center rounded mr-1 bg-dark-800 shadow-sm text-primary text-xs hover:bg-dark-700 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto">
-                        <TokenStats token="SOLAR" />
+                        <TokenStats token="BSWAP" />
                       </div>
                     )}
                     <div className="w-auto flex items-center rounded bg-transparent shadow-sm text-primary text-xs hover:bg-dark-900 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto">
@@ -113,7 +113,7 @@ function AppBar(): JSX.Element {
                 </div>
                 <div className="flex flex-1 -mr-2 sm:hidden">
                   <div className="flex-1">
-                    <Image src="/icon.png" alt="Solarbeam" height="40px" width="40px" className="sm:hidden" />
+                    <Image src="/icon.png" alt="Brettswap" height="40px" width="40px" className="sm:hidden" />
                   </div>
                   <LanguageSwitch />
                   <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-high-emphesis focus:outline-none">
@@ -202,7 +202,7 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Eclipse`)}
                   </a>
                 </Link>
-                <Link href="https://analytics.solarbeam.io">
+                <Link href="https://analytics.brettswap.com">
                   <a
                     target="_blank"
                     className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"

@@ -1,8 +1,8 @@
 {
-  "name": "Solarbeam",
-  "short_name": "Solarbeam",
+  "name": "Brettswap",
+  "short_name": "Brettswap",
   "lang": "en",
-  "description": "Solarbeam - AMM on Moonriver.",
+  "description": "Brettswap - AMM on Brettvm_Sepolia.",
   "background_color": "#111",
   "theme_color": "#111",
   "dir": "ltr",

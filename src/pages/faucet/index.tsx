@@ -8,7 +8,7 @@ import { ButtonError } from '../../components/Button'
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'
 import DoubleGlowShadow from '../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../components/SolarbeamLogo'
+import BrettswapLogo from '../../components/BrettswapLogo'
 import Container from '../../components/Container'
 import Typography from '../../components/Typography'
 import { i18n } from '@lingui/core'
@@ -61,11 +61,11 @@ export default function Faucet(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Faucet | Solarbeam</title>
-        <meta key="description" name="description" content="Moonriver Faucet" />
+        <title>Faucet | Brettswap</title>
+        <meta key="description" name="description" content="Brettvm_Sepolia Faucet" />
       </Head>
 
-      <SolarbeamLogo />
+      <BrettswapLogo />
 
       <ReCAPTCHA
         ref={recaptchaRef}
@@ -79,20 +79,20 @@ export default function Faucet(): JSX.Element {
           <div className="p-4 space-y-4 rounded bg-dark-900" style={{ zIndex: 1 }}>
             <div className="p-4 mb-3 space-y-3 text-center">
               <Typography component="h1" variant="h2">
-                {i18n._(t`Moonriver Faucet`)}
+                {i18n._(t`Brettvm_Sepolia Faucet`)}
               </Typography>
               <Typography component="h1" variant="base">
-                A Faucet is a tool that provides a small amount of MOVR for users that used the bridge to start using Solarbeam.io without having to
-                buy MOVR somewhere else.
+                A Faucet is a tool that provides a small amount of BRETT for users that used the bridge to start using Brettswap.com without having to
+                buy BRETT somewhere else.
               </Typography>
             </div>
             <div className="flex flex-1 justify-center text-center items-center mt-8 mb-12">
-              <Image src="/images/faucet/moonriver-faucet.png" alt="Solarbeam" width={150} height={150} />
+              <Image src="/images/faucet/brettvm_sepolia-faucet.png" alt="Brettswap" width={150} height={150} />
             </div>
             <div className="p-4 mb-3 space-y-1 text-center">
               <Typography component="h1" variant="base">
                 Faucet balance:{' '}
-                {formatNumberScale(tokenBalance[FAUCET_ADDRESS]?.toSignificant(4, undefined, 2) ?? 0, false, 4)} MOVR
+                {formatNumberScale(tokenBalance[FAUCET_ADDRESS]?.toSignificant(4, undefined, 2) ?? 0, false, 4)} BRETT
               </Typography>
               <Typography component="h1" variant="base">
                 Faucet Address: {FAUCET_ADDRESS}
@@ -119,7 +119,7 @@ export default function Faucet(): JSX.Element {
                         </AutoRow>
                       </div>
                     ) : (
-                      i18n._(t`Give me some MOVR`)
+                      i18n._(t`Give me some BRETT`)
                     )}
                   </ButtonError>
                 )}

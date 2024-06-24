@@ -1,5 +1,5 @@
 import { AppState } from '..'
-import DEFAULT_TOKEN_LIST from '../../constants/token-lists/solarbeam.tokenlist.json'
+import DEFAULT_TOKEN_LIST from '../../constants/token-lists/brettswap.tokenlist.json'
 import { TokenList } from '@uniswap/token-lists'
 import { UNSUPPORTED_LIST_URLS } from '../../constants/token-lists'
 import { WrappedTokenInfo } from './wrappedTokenInfo'
@@ -64,7 +64,7 @@ function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddress
     42161: { ...map1[42161], ...map2[42161] }, // arbitrum
     79377087078960: { ...map1[79377087078960], ...map2[79377087078960] }, // arbitrum testnet
     1287: { ...map1[1287], ...map2[1287] }, // moonbase
-    1285: { ...map1[1285], ...map2[1285] }, // moonriver
+    532: { ...map1[532], ...map2[532] }, // brettvm_sepolia
     128: { ...map1[128], ...map2[128] }, // heco
     256: { ...map1[256], ...map2[256] }, // heco testnet
     43114: { ...map1[43114], ...map2[43114] }, // avax mainnet

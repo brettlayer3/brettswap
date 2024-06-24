@@ -3,12 +3,12 @@ import { ChainId, MASTERCHEF_ADDRESS, Token, ZERO } from '../../sdk'
 import { Chef, PairType } from './enum'
 import { Disclosure, Transition } from '@headlessui/react'
 import React, { useState } from 'react'
-import { usePendingSolar, useUserInfo } from './hooks'
+import { usePendingBswap, useUserInfo } from './hooks'
 
 import Button from '../../components/Button'
 import Dots from '../../components/Dots'
 import { MASTERCHEF_V2_ADDRESS } from '../../constants'
-import { SOLAR_DISTRIBUTOR_ADDRESS, MINICHEF_ADDRESS } from '../../constants/addresses'
+import { BSWAP_DISTRIBUTOR_ADDRESS, MINICHEF_ADDRESS } from '../../constants/addresses'
 import { Input as NumericalInput } from '../../components/NumericalInput'
 import { formatNumber, formatNumberScale, formatPercent } from '../../functions'
 import { getAddress } from '@ethersproject/address'
@@ -47,14 +47,14 @@ const FarmListItem = ({ farm }) => {
   // TODO: Replace these
   const { amount, nextHarvestUntil } = useUserInfo(farm, liquidityToken)
 
-  const pendingSolar = usePendingSolar(farm)
+  const pendingBswap = usePendingBswap(farm)
 
   const reward = usePendingReward(farm)
 
   const typedDepositValue = tryParseAmount(depositValue, liquidityToken)
   const typedWithdrawValue = tryParseAmount(withdrawValue, liquidityToken)
 
-  const [approvalState, approve] = useApproveCallback(typedDepositValue, SOLAR_DISTRIBUTOR_ADDRESS[chainId])
+  const [approvalState, approve] = useApproveCallback(typedDepositValue, BSWAP_DISTRIBUTOR_ADDRESS[chainId])
 
   const { deposit, withdraw, harvest } = useMasterChef()
 
@@ -98,7 +98,7 @@ const FarmListItem = ({ farm }) => {
                   disabled={farm?.id === '1'}
                   onClick={() => {
                     if (!balance.equalTo(ZERO)) {
-                      if (liquidityToken?.symbol == 'SOLAR') {
+                      if (liquidityToken?.symbol == 'BSWAP') {
                         try {
                           const minValue = 1 / 10 ** (liquidityToken?.decimals - 10)
                           const newValue = parseFloat(balance.toFixed(liquidityToken?.decimals)) - minValue
@@ -138,7 +138,7 @@ const FarmListItem = ({ farm }) => {
                 onClick={async () => {
                   setPendingTx(true)
                   try {
-                    // KMP decimals depend on asset, SLP is always 18
+                    // KMP decimals depend on asset, BLP is always 18
                     const tx = await deposit(farm?.id, depositValue.toBigNumber(liquidityToken?.decimals))
 
                     addTransaction(tx, {
@@ -201,7 +201,7 @@ const FarmListItem = ({ farm }) => {
               onClick={async () => {
                 setPendingTx(true)
                 try {
-                  // KMP decimals depend on asset, SLP is always 18
+                  // KMP decimals depend on asset, BLP is always 18
                   const tx = await withdraw(farm?.id, withdrawValue.toBigNumber(liquidityToken?.decimals))
                   addTransaction(tx, {
                     summary: `${i18n._(t`Withdraw`)} ${
@@ -221,7 +221,7 @@ const FarmListItem = ({ farm }) => {
             </Button>
           </div>
         </div>
-        {pendingSolar && pendingSolar.greaterThan(ZERO) && (
+        {pendingBswap && pendingBswap.greaterThan(ZERO) && (
           <div className="px-4 pb-4">
             <Button
               color="gradient"
@@ -245,7 +245,7 @@ const FarmListItem = ({ farm }) => {
                 setPendingTx(false)
               }}
             >
-              {i18n._(t`Harvest ${formatNumber(pendingSolar.toFixed(18))} SOLAR`)}
+              {i18n._(t`Harvest ${formatNumber(pendingBswap.toFixed(18))} BSWAP`)}
             </Button>
           </div>
         )}

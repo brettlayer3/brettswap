@@ -14,7 +14,7 @@ export const DEFAULT_CHAIN_FROM: Chain = {
 }
 
 export const DEFAULT_CHAIN_TO: Chain = {
-  id: ChainId.MOONRIVER,
-  icon: NETWORK_ICON[ChainId.MOONRIVER],
-  name: NETWORK_LABEL[ChainId.MOONRIVER],
+  id: ChainId.BRETTVM_SEPOLIA,
+  icon: NETWORK_ICON[ChainId.BRETTVM_SEPOLIA],
+  name: NETWORK_LABEL[ChainId.BRETTVM_SEPOLIA],
 }

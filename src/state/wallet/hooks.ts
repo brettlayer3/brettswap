@@ -155,10 +155,10 @@ export function useMultichainCurrencyBalance(
   account?: string,
   currency?: Currency
 ): CurrencyAmount<Currency> | undefined {
-  const { chainId: moonriverChainId } = useActiveWeb3React()
-  const moonriverBalance = useCurrencyBalance(
-    chainId == moonriverChainId && account,
-    chainId == moonriverChainId && currency
+  const { chainId: brettvm_sepoliaChainId } = useActiveWeb3React()
+  const brettvm_sepoliaBalance = useCurrencyBalance(
+    chainId == brettvm_sepoliaChainId && account,
+    chainId == brettvm_sepoliaChainId && currency
   )
   const [value, setValue] = useState(null)
 
@@ -185,14 +185,14 @@ export function useMultichainCurrencyBalance(
   }, [account, chainId, currency])
 
   useEffect(() => {
-    if (account && chainId && currency && chainId != moonriverChainId) {
+    if (account && chainId && currency && chainId != brettvm_sepoliaChainId) {
       getBalance()
     } else {
       setValue(null)
     }
-  }, [account, chainId, currency, getBalance, moonriverChainId])
+  }, [account, chainId, currency, getBalance, brettvm_sepoliaChainId])
 
   return useMemo(() => {
-    return chainId == moonriverChainId ? moonriverBalance : value
-  }, [chainId, moonriverBalance, moonriverChainId, value])
+    return chainId == brettvm_sepoliaChainId ? brettvm_sepoliaBalance : value
+  }, [chainId, brettvm_sepoliaBalance, brettvm_sepoliaChainId, value])
 }

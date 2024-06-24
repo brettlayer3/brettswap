@@ -11,7 +11,7 @@ const Kovan = '/images/networks/kovan-network.jpg'
 const Mainnet = '/images/networks/ethereum.png'
 const Matic = '/images/networks/matic-network.jpg'
 const Moonbeam = '/images/networks/moonbeam-network.jpg'
-const Moonriver = '/images/networks/moonriver.png'
+const Brettvm_Sepolia = '/images/networks/brettvm_sepolia.png'
 const OKEx = '/images/networks/okex-network.jpg'
 const Polygon = '/images/networks/polygon-network.jpg'
 const Rinkeby = '/images/networks/rinkeby-network.jpg'
@@ -34,7 +34,7 @@ export const NETWORK_ICON = {
   [ChainId.ARBITRUM]: Arbitrum,
   [ChainId.ARBITRUM_TESTNET]: Arbitrum,
   [ChainId.MOONBEAM_TESTNET]: Moonbeam,
-  [ChainId.MOONRIVER]: Moonriver,
+  [ChainId.BRETTVM_SEPOLIA]: Brettvm_Sepolia,
   [ChainId.AVALANCHE]: Avalanche,
   [ChainId.AVALANCHE_TESTNET]: Avalanche,
   [ChainId.HECO]: Heco,
@@ -62,7 +62,7 @@ export const NETWORK_LABEL: { [chainId in ChainId]?: string } = {
   [ChainId.BSC]: 'BSC',
   [ChainId.BSC_TESTNET]: 'BSC Testnet',
   [ChainId.MOONBEAM_TESTNET]: 'Moonbase',
-  [ChainId.MOONRIVER]: 'Moonriver',
+  [ChainId.BRETTVM_SEPOLIA]: 'Brettvm_Sepolia',
   [ChainId.AVALANCHE]: 'Avalanche',
   [ChainId.AVALANCHE_TESTNET]: 'Fuji',
   [ChainId.HECO]: 'HECO',

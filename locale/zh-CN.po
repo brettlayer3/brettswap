@@ -37,8 +37,8 @@ msgstr ""
 #~ msgstr "创建新的市场"
 
 #: src/pages/locker/create/index.tsx:350
-msgid "- 0.1 MOVR to lock"
-msgstr "- 0.1 MOVR上锁"
+msgid "- 0.1 BRETT to lock"
+msgstr "- 0.1 BRETT上锁"
 
 #: src/pages/locker/create/index.tsx:356
 msgid "- Always DYOR"
@@ -93,11 +93,11 @@ msgstr "30天"
 #~ msgstr "Polygon上的300M+ TVL!启用优化的路由"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
-#~ msgstr "<0>提示： </0>为了开始获得奖励，您需要首先通过向指定代币对添加流动性或<1>迁移现有流动性来获取一些SLP。 </1>拥有SLP后，您可以将其抵押到此挖矿页面中开始挖矿。随时可以借出质押停止挖矿，通过单击“移除流动性”将SLP转换回基本代币。单击“收获”可随时获得奖励。"
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some BLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have BLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your BLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgstr "<0>提示： </0>为了开始获得奖励，您需要首先通过向指定代币对添加流动性或<1>迁移现有流动性来获取一些BLP。 </1>拥有BLP后，您可以将其抵押到此挖矿页面中开始挖矿。随时可以借出质押停止挖矿，通过单击“移除流动性”将BLP转换回基本代币。单击“收获”可随时获得奖励。"
 
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
-#~ msgstr "<0>提示： </0>为了开始获得奖励，您需要首先通过向指定代币对添加流动性或<1>迁移现有流动性来获取一些SLP。 </1>拥有SLP后，您可以将其抵押到此挖矿页面中开始挖矿。随时可以借出质押停止挖矿，通过单击“移除流动性”将SLP转换回基本代币。单击“收获”可随时获得奖励。"
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some BLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have BLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your BLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgstr "<0>提示： </0>为了开始获得奖励，您需要首先通过向指定代币对添加流动性或<1>迁移现有流动性来获取一些BLP。 </1>拥有BLP后，您可以将其抵押到此挖矿页面中开始挖矿。随时可以借出质押停止挖矿，通过单击“移除流动性”将BLP转换回基本代币。单击“收获”可随时获得奖励。"
 
 #: src/pages/RemoveLiquidity/index.tsx:450
 #~ msgid "<0>Tip:</0> Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive."
@@ -109,7 +109,7 @@ msgstr "30天"
 
 #: src/pages/AddLiquidity/index.tsx:254
 #~ msgid "<0>Tip:</0> When you add liquidity, you will receive pool tokens representing your position. These tokens automatically earn fees proportional to your share of the pool, and can be redeemed at any time."
-#~ msgstr "<0>提示：</0>当您添加流动性的时候，您将收到代表您所提供流动性的持仓代币SLP。这些代币会自动收取手续费收入，随时可以取出。"
+#~ msgstr "<0>提示：</0>当您添加流动性的时候，您将收到代表您所提供流动性的持仓代币BLP。这些代币会自动收取手续费收入，随时可以取出。"
 
 #: src/kashi/pages/Markets/Borrow.tsx:29 src/kashi/pages/Markets/Lending.tsx:26
 #~ msgid "<0>Your</0> Positions"
@@ -120,8 +120,8 @@ msgstr "30天"
 #~ msgstr ""
 
 #: src/features/swap/AdvancedSwapDetails.tsx:92
-msgid "A portion of each trade (0.25%) goes Solarbeam Treasury."
-msgstr "每笔交易的一部分（0.25%）会进入Solarbeam金库"
+msgid "A portion of each trade (0.25%) goes Brettswap Treasury."
+msgstr "每笔交易的一部分（0.25%）会进入Brettswap金库"
 
 #: src/features/lending/TradeReview.tsx:72
 msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
@@ -397,7 +397,7 @@ msgstr "跨链桥"
 #~ msgstr ""
 
 #: src/pages/bridge/index.tsx:519
-msgid "Bridge tokens to and from the Moonriver Network"
+msgid "Bridge tokens to and from the Brettvm_Sepolia Network"
 msgstr ""
 
 #: src/pages/bridge/index.tsx:438
@@ -709,7 +709,7 @@ msgstr "文档"
 
 #: src/components/Header/More.tsx:15
 #: src/components/Menu.tsx:14
-msgid "Documentation for Solarbeam.io users"
+msgid "Documentation for Brettswap.com users"
 msgstr ""
 
 #: src/components/Header/More.tsx:21 src/components/Menu.tsx:19
@@ -907,7 +907,7 @@ msgid "Github"
 msgstr "Github"
 
 #: src/pages/faucet/index.tsx:122
-msgid "Give me some MOVR"
+msgid "Give me some BRETT"
 msgstr ""
 
 #: src/components/Back.tsx:23
@@ -931,8 +931,8 @@ msgstr "收获"
 
 #: src/features/farm/FarmListItemDetails.tsx:248
 #: src/features/vault/VaultListItemDetails.tsx:318
-msgid "Harvest {0} SOLAR"
-msgstr "收获 {0} SOLAR"
+msgid "Harvest {0} BSWAP"
+msgstr "收获 {0} BSWAP"
 
 #: src/pages/Yield/masterchefv1/InputGroup.tsx:126
 #~ msgid "Harvest {0} SUSHI"
@@ -1347,7 +1347,7 @@ msgstr "最少可获得的数量"
 #~ msgstr "错过了拍卖？"
 
 #: src/pages/faucet/index.tsx:82
-msgid "Moonriver Faucet"
+msgid "Brettvm_Sepolia Faucet"
 msgstr ""
 
 #: src/features/farm/FarmMenu.tsx:31
@@ -1650,8 +1650,8 @@ msgid "Remove Liquidity"
 msgstr "删除流动金"
 
 #: src/pages/exchange/remove/[[...tokens]].tsx:715
-msgid "Remove liquidity of Solarbeam"
-msgstr "从Solarbeam中移除流动性"
+msgid "Remove liquidity of Brettswap"
+msgstr "从Brettswap中移除流动性"
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:458
 msgid "Remove recipient"
@@ -1717,12 +1717,12 @@ msgstr "路由经过这些代币将给您的交易带来最好的价格。"
 #~ msgstr "SAAVE：在一次交易中叠加您的收益率"
 
 #: src/pages/kashi/borrow/[pair].tsx:244
-#~ msgid "SLP"
+#~ msgid "BLP"
 #~ msgstr ""
 
 #: src/components/YieldDetails/index.tsx:104
-msgid "SOLAR per $1000"
-msgstr "每 $1000 的SOLAR"
+msgid "BSWAP per $1000"
+msgstr "每 $1000 的BSWAP"
 
 #~ msgid "SUSHI Balance"
 #~ msgstr "SUSHI余额"
@@ -1814,20 +1814,20 @@ msgstr "可容忍滑点"
 #~ msgstr ""
 
 #: src/pages/bridge/index.tsx:76
-#~ msgid "Solar Bridge"
+#~ msgid "Bswap Bridge"
 #~ msgstr ""
 
 #: src/pages/vaults/index.tsx:154
-msgid "Solar Vault"
+msgid "Bswap Vault"
 msgstr ""
 
 #: src/pages/vaults/index.tsx:158
-msgid "Solar Vault is a set of high incentivized pools. Long term supporters can choose to lock SOLAR for a determined period for higher rewards."
+msgid "Bswap Vault is a set of high incentivized pools. Long term supporters can choose to lock BSWAP for a determined period for higher rewards."
 msgstr ""
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:369
-msgid "Solarbeam"
-msgstr "Solarbeam"
+msgid "Brettswap"
+msgstr "Brettswap"
 
 #: src/features/lending/Button.tsx:28
 #: src/features/limit-order/LimitOrderButton.tsx:189
@@ -2006,7 +2006,7 @@ msgid "The output token cannot be transferred. There may be an issue with the ou
 msgstr "输出代币不能被转移。输出代币可能有问题。"
 
 #: src/pages/vaults/index.tsx:163
-msgid "The participants receive various benefits such as higher rewards according to lock duration, higher allocations in Solar Launchpad and more."
+msgid "The participants receive various benefits such as higher rewards according to lock duration, higher allocations in Bswap Launchpad and more."
 msgstr ""
 
 #: src/hooks/useSwapCallback.ts:139 src/hooks/useSwapCallback.ts:139

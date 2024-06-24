@@ -1,29 +1,29 @@
 const Web3 = require('web3')
 const { default: axios } = require('axios')
 import IUniswapV2PairABI from '../../constants/abis/uniswap-v2-pair.json'
-const NETWORK_URL = 'https://moonriver.api.onfinality.io/public'
+const NETWORK_URL = 'https://rpc-sepolia.brettvm.com'
 const web3 = new Web3(NETWORK_URL)
 
 export default async function handler(req, res) {
-  let movrUSDCContract = new web3.eth.Contract(IUniswapV2PairABI, '0xe537f70a8b62204832B8Ba91940B77d3f79AEb81')
-  const movrUSDCReserves = await movrUSDCContract.methods.getReserves().call()
+  let brettUSDCContract = new web3.eth.Contract(IUniswapV2PairABI, '0xe537f70a8b62204832B8Ba91940B77d3f79AEb81')
+  const brettUSDCReserves = await brettUSDCContract.methods.getReserves().call()
 
-  const movrUSDCPrice = (Number(movrUSDCReserves.reserve1) / Number(movrUSDCReserves.reserve0) ) * 1e12
+  const brettUSDCPrice = (Number(brettUSDCReserves.reserve1) / Number(brettUSDCReserves.reserve0) ) * 1e12
 
-  let solarMovrContract = new web3.eth.Contract(IUniswapV2PairABI, '0x7eDA899b3522683636746a2f3a7814e6fFca75e1')
-  const solarMovrReserves = await solarMovrContract.methods.getReserves().call()
+  let bswapBrettContract = new web3.eth.Contract(IUniswapV2PairABI, '0x7eDA899b3522683636746a2f3a7814e6fFca75e1')
+  const bswapBrettReserves = await bswapBrettContract.methods.getReserves().call()
 
-  const solarMovrPrice = Number(solarMovrReserves.reserve1) / Number(solarMovrReserves.reserve0)
+  const bswapBrettPrice = Number(bswapBrettReserves.reserve1) / Number(bswapBrettReserves.reserve0)
 
-  let ribMovrContract = new web3.eth.Contract(IUniswapV2PairABI, '0x0acDB54E610dAbC82b8FA454b21AD425ae460DF9')
-  const ribMovrReserves = await ribMovrContract.methods.getReserves().call()
+  let ribBrettContract = new web3.eth.Contract(IUniswapV2PairABI, '0x0acDB54E610dAbC82b8FA454b21AD425ae460DF9')
+  const ribBrettReserves = await ribBrettContract.methods.getReserves().call()
 
-  const ribMovrPrice = Number(ribMovrReserves.reserve0) / Number(ribMovrReserves.reserve1)
+  const ribBrettPrice = Number(ribBrettReserves.reserve0) / Number(ribBrettReserves.reserve1)
 
   let ret = {}
-  ret['movr'] = movrUSDCPrice
-  ret['solar'] = solarMovrPrice * movrUSDCPrice
-  ret['rib'] = ribMovrPrice * movrUSDCPrice
+  ret['brett'] = brettUSDCPrice
+  ret['bswap'] = bswapBrettPrice * brettUSDCPrice
+  ret['rib'] = ribBrettPrice * brettUSDCPrice
   ret['usdc'] = 1
 
   res.status(200).json(ret)

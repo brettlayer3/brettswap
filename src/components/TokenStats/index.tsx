@@ -8,17 +8,17 @@ import { ChainId } from '../../sdk'
 import { PriceContext } from '../../contexts/priceContext'
 
 const supportedTokens = {
-  MOVR: {
-    name: 'Moonriver',
-    symbol: 'MOVR',
-    icon: '/images/tokens/movr.png',
+  BRETT: {
+    name: 'Brettvm_Sepolia',
+    symbol: 'BRETT',
+    icon: '/images/tokens/brett.png',
   },
-  SOLAR: {
-    name: 'Solarbeam Token',
-    symbol: 'SOLAR',
-    icon: '/images/tokens/solar.png',
+  BSWAP: {
+    name: 'Brettswap Token',
+    symbol: 'BSWAP',
+    icon: '/images/tokens/bswap.png',
     address: {
-      [ChainId.MOONRIVER]: '0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B',
+      [ChainId.BRETTVM_SEPOLIA]: '0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B',
     },
   },
 }

@@ -2,8 +2,8 @@ import React from 'react'
 import { usePricesApi } from '../features/farm/hooks'
 
 export const PriceContext = React.createContext({
-  movr: 0,
-  solar: 0,
+  brett: 0,
+  bswap: 0,
   rib: 0,
 })
 

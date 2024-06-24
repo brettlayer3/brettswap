@@ -2,13 +2,13 @@
   {
     "inputs": [
       {
-        "internalType": "contract ISolarERC20",
-        "name": "_solar",
+        "internalType": "contract IBswapERC20",
+        "name": "_bswap",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "_solarPerBlock",
+        "name": "_bswapPerBlock",
         "type": "uint256"
       }
     ],
@@ -535,7 +535,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingSolar",
+    "name": "pendingBswap",
     "outputs": [
       {
         "internalType": "uint256",
@@ -573,7 +573,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "accSolarPerShare",
+        "name": "accBswapPerShare",
         "type": "uint256"
       },
       {
@@ -676,10 +676,10 @@
   },
   {
     "inputs": [],
-    "name": "solar",
+    "name": "bswap",
     "outputs": [
       {
-        "internalType": "contract ISolarERC20",
+        "internalType": "contract IBswapERC20",
         "name": "",
         "type": "address"
       }
@@ -689,7 +689,7 @@
   },
   {
     "inputs": [],
-    "name": "solarPerBlock",
+    "name": "bswapPerBlock",
     "outputs": [
       {
         "internalType": "uint256",
@@ -748,7 +748,7 @@
   },
   {
     "inputs": [],
-    "name": "totalSolarInPools",
+    "name": "totalBswapInPools",
     "outputs": [
       {
         "internalType": "uint256",
@@ -812,7 +812,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_solarPerBlock",
+        "name": "_bswapPerBlock",
         "type": "uint256"
       }
     ],

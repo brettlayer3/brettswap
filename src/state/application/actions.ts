@@ -30,8 +30,8 @@ export enum ApplicationModal {
   LANGUAGE,
   NETWORK,
   CHAIN,
-  SOLAR_STATS,
-  MOVR_STATS,
+  BSWAP_STATS,
+  BRETT_STATS,
   YIELD_DETAILS,
 }
 
