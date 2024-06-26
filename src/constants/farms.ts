@@ -32,7 +32,7 @@ export const POOLS: AddressMap = {
         decimals: 18,
       },
       token1: {
-        id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+        id: '0x22F67144992619098F376A7a0d270Aab7fDdA885',
         name: 'Brett',
         symbol: 'BRETT',
         decimals: 18,
@@ -49,10 +49,10 @@ export const POOLS: AddressMap = {
         decimals: 18,
       },
     },
-    '0x98878B06940aE243284CA214f92Bb71a2b032B8A': {
+    '0x22F67144992619098F376A7a0d270Aab7fDdA885': {
       id: 2,
       token0: {
-        id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+        id: '0x22F67144992619098F376A7a0d270Aab7fDdA885',
         name: 'Wrapped Brett',
         symbol: 'WBRETT',
         decimals: 18,
@@ -84,7 +84,7 @@ export const POOLS: AddressMap = {
         decimals: 18,
       },
       token1: {
-        id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+        id: '0x22F67144992619098F376A7a0d270Aab7fDdA885',
         name: 'Brett',
         symbol: 'BRETT',
         decimals: 18,
@@ -110,7 +110,7 @@ export const POOLS: AddressMap = {
         decimals: 6,
       },
       token1: {
-        id: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+        id: '0x22F67144992619098F376A7a0d270Aab7fDdA885',
         name: 'Brett',
         symbol: 'BRETT',
         decimals: 18,

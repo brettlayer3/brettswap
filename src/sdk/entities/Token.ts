@@ -191,7 +191,7 @@ export const WETH9: { [chainId: number]: Token } = {
   ),
   [ChainId.BRETTVM_SEPOLIA]: new Token(
     ChainId.BRETTVM_SEPOLIA,
-    '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+    '0x22F67144992619098F376A7a0d270Aab7fDdA885',
     18,
     'WBRETT',
     'Wrapped BRETT'
@@ -334,7 +334,7 @@ export const WNATIVE: { [chainId: number]: Token } = {
   ),
   [ChainId.BRETTVM_SEPOLIA]: new Token(
     ChainId.BRETTVM_SEPOLIA,
-    '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+    '0x22F67144992619098F376A7a0d270Aab7fDdA885',
     18,
     'WBRETT',
     'Wrapped BRETT'
