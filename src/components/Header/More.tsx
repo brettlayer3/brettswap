@@ -13,39 +13,39 @@ const items = (i18n: I18n) => [
   {
     name: i18n._(t`Docs`),
     description: i18n._(t`Documentation for Brettswap.com users`),
-    href: 'https://docs.brettswap.com',
+    href: 'https://docs.brettvm.com',
     external: true,
   },
-  {
-    name: i18n._(t`Github`),
-    description: i18n._(t`We're supporters of Open Source`),
-    href: 'https://github.com/brettswapcom',
-    external: true,
-  },
+  // {
+  //   name: i18n._(t`Github`),
+  //   description: i18n._(t`We're supporters of Open Source`),
+  //   href: 'https://github.com/brettswapcom',
+  //   external: true,
+  // },
   {
     name: i18n._(t`Telegram`),
     description: i18n._(t`Join the community on Telegram`),
-    href: 'https://t.me/brettswapcom',
+    href: 'https://t.me/brettlayer3',
     external: true,
   },
-  {
-    name: i18n._(t`Discord`),
-    description: i18n._(t`Join the community on Discord`),
-    href: 'https://discord.gg/brettswap',
-    external: true,
-  },
+  // {
+  //   name: i18n._(t`Discord`),
+  //   description: i18n._(t`Join the community on Discord`),
+  //   href: 'https://discord.gg/brettswap',
+  //   external: true,
+  // },
   {
     name: i18n._(t`Twitter`),
     description: i18n._(t`Follow us on Twitter`),
-    href: 'https://twitter.com/brettswapcom',
+    href: 'https://twitter.com/brettlayer3',
     external: true,
   },
-  {
-    name: i18n._(t`Medium`),
-    description: i18n._(t`Follow us on Medium`),
-    href: 'https://brettswap.medium.com',
-    external: true,
-  },
+  // {
+  //   name: i18n._(t`Medium`),
+  //   description: i18n._(t`Follow us on Medium`),
+  //   href: 'https://brettswap.medium.com',
+  //   external: true,
+  // },
 ]
 
 export default function Menu() {

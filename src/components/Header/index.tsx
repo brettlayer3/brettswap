@@ -43,7 +43,16 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Pool`)}
                         </a>
                       </NavLink>
-                      <NavLink href={'/farm'}>
+                      <NavLink href="https://faucet.brettvm.com">
+                        <a
+                          target="_blank"
+                          id={`swap-nav-link`}
+                          className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
+                        >
+                          {i18n._(t`Faucet`)}
+                        </a>
+                      </NavLink>
+                      {/* <NavLink href={'/farm'}>
                         <a
                           id={`farm-nav-link`}
                           className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
@@ -85,7 +94,7 @@ function AppBar(): JSX.Element {
                         >
                           {i18n._(t`Analytics`)}
                         </a>
-                      </NavLink>
+                      </NavLink> */}
                     </div>
                   </div>
                 </div>
@@ -94,12 +103,12 @@ function AppBar(): JSX.Element {
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
                     {chainId && [ChainId.BRETTVM_SEPOLIA].includes(chainId) && (
                       <div className="w-auto flex items-center rounded mr-1 bg-dark-800 shadow-sm text-primary text-xs hover:bg-dark-700 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto hidden sm:block">
-                        <TokenStats token="BRETT" />
+                        {/* <TokenStats token="BRETT" /> */}
                       </div>
                     )}
                     {chainId && [ChainId.BRETTVM_SEPOLIA].includes(chainId) && (
                       <div className="w-auto flex items-center rounded mr-1 bg-dark-800 shadow-sm text-primary text-xs hover:bg-dark-700 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto">
-                        <TokenStats token="BSWAP" />
+                        {/* <TokenStats token="BSWAP" /> */}
                       </div>
                     )}
                     <div className="w-auto flex items-center rounded bg-transparent shadow-sm text-primary text-xs hover:bg-dark-900 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto">
@@ -168,7 +177,15 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Pool`)}
                   </a>
                 </Link>
-                <Link href={'/farm'}>
+                <Link href="https://faucet.brettvm.com">
+                  <a
+                    target="_blank"
+                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                  >
+                    {i18n._(t`Faucet`)}
+                  </a>
+                </Link>
+                {/* <Link href={'/farm'}>
                   <a
                     id={`farm-nav-link`}
                     className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
@@ -209,7 +226,7 @@ function AppBar(): JSX.Element {
                   >
                     {i18n._(t`Analytics`)}
                   </a>
-                </Link>
+                </Link> */}
               </div>
             </Popover.Panel>
           </>
