@@ -81,7 +81,7 @@ const useZapperFarms = () => {
             (liquidityPosition: any) => liquidityPosition.pair.id === pair.id
           )
           const blocksPerHour = 3600 / Number(averageBlockTime)
-          const balance = Number(pool.blpBalance / 1e18) > 0 ? Number(pool.blpBalance / 1e18) : 0.1
+          const balance = Number(pool.slpBalance / 1e18) > 0 ? Number(pool.slpBalance / 1e18) : 0.1
           const totalSupply = pair.totalSupply > 0 ? pair.totalSupply : 0.1
           const reserveUSD = pair.reserveUSD > 0 ? pair.reserveUSD : 0.1
           const balanceUSD = (balance / Number(totalSupply)) * Number(reserveUSD)
@@ -99,7 +99,7 @@ const useZapperFarms = () => {
             name: pair.token0.name + ' ' + pair.token1.name,
             pid: Number(pool.id),
             pairAddress: pair.id,
-            blpBalance: pool.blpBalance,
+            slpBalance: pool.slpBalance,
             liquidityPair: pair,
             roiPerBlock,
             roiPerHour,
@@ -143,8 +143,8 @@ const useZapperFarms = () => {
           } else {
             deposited = Fraction.from(farm.balance, BigNumber.from(10).pow(18)).toString(18)
             depositedUSD =
-              farmDetails.blpBalance && Number(farmDetails.blpBalance / 1e18) > 0
-                ? (Number(deposited) * Number(farmDetails.tvl)) / (farmDetails.blpBalance / 1e18)
+              farmDetails.slpBalance && Number(farmDetails.slpBalance / 1e18) > 0
+                ? (Number(deposited) * Number(farmDetails.tvl)) / (farmDetails.slpBalance / 1e18)
                 : 0
           }
           const pending = Fraction.from(farm.pending, BigNumber.from(10).pow(18)).toString(18)

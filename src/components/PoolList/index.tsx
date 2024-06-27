@@ -36,7 +36,7 @@ const TokenBalance = ({ farm }: any) => {
             <div className="flex items-center justify-end">
               <div>
                 <div className="text-right">{formatNumber(farm.tvl, true)} </div>
-                <div className="text-right text-secondary">{formatNumber(farm.blpBalance / 1e18, false)} BLP</div>
+                <div className="text-right text-secondary">{formatNumber(farm.slpBalance / 1e18, false)} BLP</div>
               </div>
             </div>
             <div className="flex items-center justify-end">
